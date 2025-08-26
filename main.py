@@ -25,20 +25,20 @@ conversation_router = ConversationRouter(
             prompt_preamble="Have a pleasant conversation about life",
         )
     ),
-    # synthesizer_thunk=lambda output_audio_config: AzureSynthesizer(
-    #     AzureSynthesizerConfig.from_output_audio_config(
-    #         output_audio_config,
-    #         voice_name="en-US-SteffanNeural",
-    #     )
-    # ),
-    synthesizer_thunk=lambda output_audio_config: CoquiTTSSynthesizer(
-        CoquiTTSSynthesizerConfig.from_output_audio_config(
+    synthesizer_thunk=lambda output_audio_config: AzureSynthesizer(
+        AzureSynthesizerConfig.from_output_audio_config(
             output_audio_config,
-            tts_kwargs = {
-                "model_name": "tts_models/en/ljspeech/tacotron2-DDC_ph"
-            },
+            voice_name="en-US-SteffanNeural",
         )
     ),
+    # synthesizer_thunk=lambda output_audio_config: CoquiTTSSynthesizer(
+    #     CoquiTTSSynthesizerConfig.from_output_audio_config(
+    #         output_audio_config,
+    #         tts_kwargs = {
+    #             "model_name": "tts_models/en/ljspeech/tacotron2-DDC_ph"
+    #         },
+    #     )
+    # ),
 )
 
 app.include_router(conversation_router.get_router())
