@@ -9,8 +9,8 @@ from vocode.streaming.models.message import BaseMessage
 from vocode.streaming.models.synthesizer import AzureSynthesizerConfig
 from vocode.streaming.synthesizer.azure_synthesizer import AzureSynthesizer
 from vocode.streaming.models.audio import AudioEncoding   # ✅ fixed import
-from vocode.streaming.models.synthesizer import CoquiTTSSynthesizerConfig
-from vocode.streaming.synthesizer.coqui_tts_synthesizer import CoquiTTSSynthesizer
+# from vocode.streaming.models.synthesizer import CoquiTTSSynthesizerConfig
+# from vocode.streaming.synthesizer.coqui_tts_synthesizer import CoquiTTSSynthesizer
 
 load_dotenv()
 

@@ -3,6 +3,5 @@ fastapi
 uvicorn
 python-multipart
 websockets
-coqui-tts
 python-dotenv
 
